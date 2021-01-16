@@ -1,0 +1,389 @@
+/* Three ways to add CSS 
+1. External CSS
+2. Internal CSS 
+ last mein kisko likha hai.
+3. Inline CSS  1st Priority */
+
+
+/* 1.Element Selector. 3rd priority 
+   2.ID Selector.   1st priority
+   3.Class Selector. 2nd priority
+   
+   if same class,id,element is written twice then Order is considered.
+   i.e selector written at last is given highest priority.
+*/
+
+/* In CSS colors can be specified using
+  #predefined color names.
+  #RGB.
+  #RGBA.
+  #HEX.
+  #HSL.
+  #HSLA.
+*/
+/* 
+Color value between 0 and 255
+Black : rgb(0,0,0)
+White : rgb(255,255,255)
+Red : rgb(255,0,)
+Green : rgb(0,255,0)
+Blue : rgb(0,0,255)
+
+RGBA : (red,green,blue,alpha)
+alpha parameter is a number between 0.0(fully transparent)and
+1.0(not transparent at all)
+
+#rrggbb
+rr(red) , gg(green) , bb(blue)
+hexadecimal values between 00 and ff (same as decimal 0-255)
+Red : #ff0000
+Black :#000000
+White :#ffffff
+
+HSL Value
+In CSS, a color can be specified using hue, saturation, and lightness (HSL) in the form:
+hsl(hue, saturation, lightness)
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+
+Live Demo at :https://www.w3schools.com/css/css_colors_hsl.asp
+
+
+HSLA Value
+HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color.
+An HSLA color value is specified with:
+hsla(hue, saturation, lightness, alpha)
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all)
+
+Live Demo at :https://www.w3schools.com/css/css_colors_hsl.asp
+
+*/
+
+/* We use length in width , height , margin , padding , font-size
+There are two type of units in css
+A.Absolute:
+1.cm
+2.mm
+3.in
+4.px(1inch = 96px)
+5.pt(1inch = 72pt)
+6.pc(1pc = 12pt)
+
+
+B.Relative:
+1.em - em is relative to the size of its direct parent
+2.rem - rem is only relative to root (html tag) size
+3.vh - 1% of view port height
+4.vw - 1% of view port width
+5.% - relative to parent
+
+*/
+/* html{
+    font-size:10px;
+} */
+#parent{
+    /* border:2px solid black; */
+    /* width: 800px; */
+    /* height :50vh; */
+    /* width: 50vw; */
+
+
+/* em wala hai */
+    font-size: 10em;
+}
+
+#child{
+    /* border:2px solid blue; */
+    /* width: 50%; */
+
+    /* font-size: 2em; */
+
+    font-size: 2rem;
+
+}
+
+
+/* Roboto wala hai */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Poppinns wala hai */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face{
+    font-family:dwnld;
+    src :url('fonts/Playball.ttf');
+}
+
+h1{
+    font-weight: normal;
+    /* font-family:'Poppins', sans-serif; */
+    /* can access multiple font as one is not available other can be used. */
+    font-family:dwnld ,'Poppins', sans-serif;
+}
+
+
+
+p{
+    /* font-size:30px; */
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bold; */
+    /* font-style:italic; */
+
+
+    /* font-variant: small-caps; */
+}
+
+#p3{
+    color : blueviolet;
+}
+
+.green-txt{
+    color : rgba(255,99,71,0.8);
+}
+
+#h{
+    font-size: 30px;
+}
+
+.underline-h{
+    text-decoration: underline;
+}
+
+#bg{
+    background-color:yellow;
+}
+
+/* All about Background & properties */
+#bg{
+    background-image: url('images/delicate-arch-1-1391746.jpg');
+    /* background-repeat: no-repeat; */
+    
+    /* for two image */
+    /* background-image: url('images/delicate-arch-1-1391746.jpg'),url('images/on-the-road-6-1384796.jpg'),url('images/sun-burst-1478549.jpg'),url('images/swiss-mountains-1362975.jpg');
+    background-position: left top,right bottom,right top,left bottom;
+    background-repeat:no-repeat; */
+
+
+    /* background-position: center center;*/
+    /* background-position: 50px 100px; */
+    /* background-position:50% 85%; */
+
+    /*distort the image*/
+    /* background-size: cover; */ 
+
+    /*doest not distort the image
+    div and image ratio should be same*/
+    /* background-size: contain;     */
+
+
+    /* background:url('images/delicate-arch-1-1391746.jpg') no-repeat cover; 
+    all in one*/
+
+   /* background-size: 100% 100%; */
+
+   /* background-attachment: fixed; */
+ }
+
+
+
+body{
+    background-color: rgb(240, 235, 245);
+    border: 3px dotted black;
+    /* width: 500px; */
+}
+
+/* All about the border & properties */
+.border{
+    /* remember the order */
+    border-style:solid dashed outset dotted;
+    border-color:lightseagreen yellowgreen red orange;
+    border-width: thick;
+
+    /* shortcut way
+    width style color
+    border : 5px solid green; */
+
+    border-radius: 10px 30px;
+}
+
+/* Height and Width */
+#wid-height{
+    /* background-color: cyan; */
+    /* height:50%; */
+    /* width:70%; */
+    /* max-width:500px; */
+    /* min-width: ; */
+    /* max-height:700px; */
+    /* min-height:500px; */
+
+
+    /* Padding: */
+    /* padding-top : 20px;
+    padding-bottom : 20px;
+    padding-left :50px; */
+    padding-right: 100px;
+
+} 
+.mrgn{
+    /* Margin */
+    border: 2px solid black;
+    /* Padding: */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 100px;
+
+}
+#margin{
+    /* margin-top:90px;
+    margin-bottom:50px;
+    margin-left:20px;
+    margin-right:25px; */
+
+    width: 200px;
+    margin : 35px auto;
+}
+#txt{
+    /* padding-right: 800px; */
+    color:blueviolet;
+    /* text-align:center; */
+    display: flex;
+    /* direction:rtl; */
+}
+img{
+    border:2px solid red;
+}
+span{
+    /* padding-left:10px; */
+    /* width:500px; */
+    text-decoration:underline;
+    text-transform:capitalize;
+    /* Gap btw two line */
+    line-height:1.6;
+    /* Space left from starting */
+    text-indent:50px;
+    /* Space btw letters */
+    letter-spacing:7px;
+    /* Space btw words */
+    word-spacing: 20px;
+
+    /* whitespace properties: */
+    /* wordwrap properties of text bigger than border: */
+
+
+}
+#shadow{
+    font-size: 60px;
+    /* Text shadow */
+    text-shadow: 5px 15px 6px gray;
+}
+
+ /* writing-mode:vertical-rl; */ 
+
+a{
+    text-decoration : none;
+   
+}
+/* follow same order as below */
+a:link{
+    color:yellowgreen;
+}
+a:visited{
+    color:black;
+}
+a:hover{
+    color:teal;
+} 
+a:active{
+    color:red;
+} 
+
+
+/* div{
+    border : 2px solid blueviolet;
+    cursor: pointer;
+} */
+
+
+/* Important */
+/* div{
+    border :2px solid blueviolet !important;
+}
+
+div{
+    border:2px solid blue;
+} */
+
+
+ /* div{ */
+    /* border : 1px solid green; */
+    /* width :500px; */
+    /* background-color: yellowgreen; */
+    /* margin: 100px; */
+    /* padding:20px; */
+    /* box-shadow: 10px 10px 5px 3px grey; */
+
+    /* box-shadow: 10px 10px 5px 3px grey inset; */
+
+    /* box-shadow: 10px 10px 5px 3px grey , -10px 10px 5px 5px blueviolet; */
+
+/* } */
+
+
+/* Opacity */
+/* #color-box{
+    background-color: green;
+    height:200px;
+    width:500px;
+    margin-bottom: 20px;
+    opacity: 0.2;
+
+}
+
+img:hover{
+    opacity:0.7;
+} */
+
+/* img{ */
+    /* filter: blur(10px); */
+    /* filter:brightness(95%); */
+    /* filter:contrast(50%); */
+    /* filter:drop-shadow(10px 8p 5px red); */
+    /* filter:grayscale(100%); */
+    /* filter:hue-rotate(90deg); */
+    /* filter:saturate(30%); */
+    /* filter:sepia(100%); */
+/* } */
+
+
+/* Image Sprite very very useful for server loading purpose plz do it in future. */
+
+#div1{
+    height: 500px;
+    border :1px solid black;
+    /* background-image: linear-gradient(green,blue,red); */
+    /* Left to right */
+    /* background-image: linear-gradient(to right,green,blue,red); */
+    /* bottom right */
+    /* background-image: linear-gradient(to bottom right , blue,red,yellowgreen); */
+    /* background-image: linear-gradient(180deg, blue,red,yellowgreen); */
+
+    /* background-image: radial-gradient(blue,red,yellowgreen); */
+    /* background-image: radial-gradient(circle,yellowgreen,green,blue); */
+    background-image: radial-gradient(circle,yellow 20%,green 30%,red 50%);     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
