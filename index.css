@@ -188,7 +188,7 @@ p{
 
 body{
     background-color: rgb(240, 235, 245);
-    border: 3px dotted black;
+    /* border: 3px dotted black; */
     /* width: 500px; */
 }
 
@@ -374,10 +374,94 @@ img:hover{
 }
 
 
+#overflow{
+    background-color: whitesmoke;
+    border:1px solid grey;
+    width : 500px;
+    height : 300px;
+    /* overflow-y: hidden; */
+    /* overflow-x:scroll; */
+
+    overflow:auto;
+
+    resize:both;
+}
+
+/*  Css resize */
+textarea{
+    resize:none;
+}
+
+/* Css list */
+ul{
+    list-style-type : lower-alpha;
+    /* to insert the img */
+    /* list-style-image: url(); */
+    
+    /* inside will help to insert inside the list */
+    /* list-style-position: inside; */
+}
+
+ol{
+    list-style-type: lower-roman;
+}
+
+li{
+    border:1px solid blue;
+}
 
 
+/* table css */
+table ,caption{
+    border:1px solid black;
+    border-collapse:collapse;
+    /* border-collapse:separate; */
+    /* border-spacing:7px; */
+
+    caption-side: bottom;
+
+    /* Auto is used to view it */
+    /* table-layout: auto; */
+
+    /* to hide the empty cell */
+    /* empty-cells:hide; */
+}
+
+tr{
+    border :1px solid red;
+}
+
+th{
+    border:2px solid blueviolet;
+    height:30px;
+    text-align: left;
+}
+
+td{
+    border:2px solid blueviolet;
+    height:55px;
+    padding:15px;
+    text-align: right;
+    vertical-align: middle;
+}
 
 
+:root{
+    --primary-color:teal;
+    --btn-color:blueviolet;
+    --text-color:white;
+}
+#fun{
+    background-color:var(--primary-color);
+    height :200px;
+    width: calc(100% - 300px);
+}
+
+a{
+    padding:10px 30px;
+    margin:20px;
+    background-color : var(--btn-color);
+}
 
 
 
